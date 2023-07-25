@@ -6,14 +6,18 @@ public class Main {
 //33. Написать программу разворота массива. Пример: [1, 2, 3] => [3, 2, 1]
 //=============================33=============================================*/
         /* Scanner sc = new Scanner(System.in);*/
-
+        // Задаем массив
         int[] arr = {1, 2, 3};
         System.out.println("Исходный массив: " + Arrays.toString(arr));
+        // Заполняем массив
         reverseArray(arr);
+        // печатаем развернутый массив
         System.out.println("Развёрнутый массив: " + Arrays.toString(arr));
     }
     public static void reverseArray(int[] arr) {
+        //получаем размер массива
         int length = arr.length;
+        //рассматриваем массив
         for (int i = 0; i < length / 2; i++) {
             // Меняем местами элементы, находящиеся на индексах i и length - i - 1
             int temp = arr[i];
