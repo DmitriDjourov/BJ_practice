@@ -1,12 +1,13 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-// 34.       Определить, присутствует ли в заданном массиве, некоторое число
-//=============================34=============================================*/
+//35.    Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
+//=============================35=============================================*/
         // 1. Задаем число размер массива
         // int N;
         // System.out.println("Введите число , размер массива : ");
@@ -14,18 +15,96 @@ public class Main {
         // N = sc.nextInt();
         // 3. Создаем массив размера N
         // int[] array = createArray(N);
-        // 4. Заполняем массив
-        // fillArray(array, sc);
-        // 5. Задаем число для поиска
-        // int X;
-        // System.out.println("Введите число для поиска в массиве : ");
-        // 6. Вводим число для поиска
-        // X = sc.nextInt();
-        // 7. Ищем в массиве наше число
-        // int ourNumber = forEachNumSearch(array, X);
-        // 8. Печатаем ответ
-        // printArray(ifOurNumber, X, array);
+        // 4. Заполняем массив рандомными трехзначными положительными числами ( числами из диапазона  [100, 999])
+        // int[] array = new int[N];
+        // Random random = new Random();
+        // 5. Подсчитываем количество четных и нечетных чисел (eveNumbers, oddNumbers)
+        // int countEveNumbers = eveNumbers(array);
+        // int countOddNumbers = oddNumbers(array);
+        // if (array[i]%2 == 0) для четных , и array[i]%2 != 0 для нечетных
+        // 6. Распечатываем массив, количество четных, количество нечетных чисел
+        // printArrayEveOdd(countEveNumbers, countOddNumbers, array)
+        // System.out.printf("В массиве %s , четных чисел %d , нечетных чисел %d ", Arrays.toString(array),countEveNumbers, countOddNumbers);
 
+        Scanner sc = new Scanner(System.in);
+        // 1. Задаем число размер массива
+        int N;
+        System.out.println("Введите размер массива N :");
+        // 2.  Заполняем число размер массива
+        N = sc.nextInt();
+        //3. Создаем массив размера N
+        //4. Заполняем массив рандомными трехзначными положительными числами ( числами из диапазона  [100, 999])
+        int[] array = createArray(N);
+        // 5. Подсчитываем количество четных и нечетных чисел (eveNumbers, oddNumbers)
+        int countEveNumbers = eveNumbers(array);
+        int countOddNumbers = oddNumbers(array);
+        // 6. Распечатываем массив, количество четных, количество нечетных чисел
+        printArrayEveOdd(countEveNumbers, countOddNumbers, array);
+    }
+
+    //Метод для создания и заполнения массива случайными числами из диапазона  [100, 999]
+    public static int[] createArray(int N) {
+        // 3. Создаем массив размера N
+        int[] array = new int[N];
+        //4. Заполнения массива случайными числами из диапазона  [100, 999]
+        Random random = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(900) + 100; // генерируем случайные число от 100 до 999
+        }
+        return array;
+    }
+
+    // Метод для нахождения количества четных элементов массива
+    public static int eveNumbers(int[] array) {
+        int eveCount = 0;
+
+        for (int j : array) {
+            if (j % 2 == 0) {
+                eveCount = eveCount + 1;
+            }
+        }
+        return eveCount;
+    }
+
+    // Метод для нахождения количества нечетных элементов массива
+    public static int oddNumbers(int[] array) {
+        int oddCount = 0;
+        for (int j : array) {
+            if (j % 2 != 0) {
+                oddCount = oddCount + 1;
+            }
+        }
+        return oddCount;
+    }
+
+    // 6. Распечатываем массив, количество четных, количество нечетных чисел
+    public static void printArrayEveOdd(int countEveNumbers, int countOddNumbers, int[] array) {
+        System.out.printf("В массиве %s , четных чисел %d , нечетных чисел %d ", Arrays.toString(array),
+                countEveNumbers, countOddNumbers);
+    }
+}
+// 34.       Определить, присутствует ли в заданном массиве, некоторое число
+//=============================34=============================================*/
+// 1. Задаем число размер массива
+// int N;
+// System.out.println("Введите число , размер массива : ");
+// 2.  Заполняем число размер массива
+// N = sc.nextInt();
+// 3. Создаем массив размера N
+// int[] array = createArray(N);
+// 4. Заполняем массив
+// fillArray(array, sc);
+// 5. Задаем число для поиска
+// int X;
+// System.out.println("Введите число для поиска в массиве : ");
+// 6. Вводим число для поиска
+// X = sc.nextInt();
+// 7. Ищем в массиве наше число
+// int ourNumber = forEachNumSearch(array, X);
+// 8. Печатаем ответ
+// printArray(ifOurNumber, X, array);
+/*
         Scanner sc = new Scanner(System.in);
         //1. Задаем число размер массива
         int N;
@@ -78,7 +157,7 @@ public class Main {
             System.out.printf("Ваше число %d не найдено в массиве %s ", X, Arrays.toString(array));
         }
     }
-}
+}*/
 //33. Написать программу разворота массива. Пример: [1, 2, 3] => [3, 2, 1]
 //=============================33=============================================*/
 /*        *//* Scanner sc = new Scanner(System.in);*//*
