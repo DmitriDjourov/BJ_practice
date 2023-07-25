@@ -1,11 +1,87 @@
 package org.example;
+
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+// 34.       Определить, присутствует ли в заданном массиве, некоторое число
+//=============================34=============================================*/
+        // 1. Задаем число размер массива
+        // int N;
+        // System.out.println("Введите число , размер массива : ");
+        // 2.  Заполняем число размер массива
+        // N = sc.nextInt();
+        // 3. Создаем массив размера N
+        // int[] array = createArray(N);
+        // 4. Заполняем массив
+        // fillArray(array, sc);
+        // 5. Задаем число для поиска
+        // int X;
+        // System.out.println("Введите число для поиска в массиве : ");
+        // 6. Вводим число для поиска
+        // X = sc.nextInt();
+        // 7. Ищем в массиве наше число
+        // int ourNumber = forEachNumSearch(array, X);
+        // 8. Печатаем ответ
+        // printArray(ifOurNumber, X, array);
+
+        Scanner sc = new Scanner(System.in);
+        //1. Задаем число размер массива
+        int N;
+        System.out.println("Введите число , размер массива : ");
+        // 2.  Заполняем число размер массива
+        N = sc.nextInt();
+        // 3. Создаем массив размера N
+        int[] array = createArray(N);
+        // 4. Заполняем массив
+        fillArray(array, sc);
+        // 5. Задаем число для поиска его в массиве
+        int X;
+        System.out.println("Введите число для поиска его в массиве : ");
+        // 6. Вводим число для поиска
+        X = sc.nextInt();
+        // 7. Ищем в массиве наше число
+        boolean ifOurNumber = forEachNumSearch(array, X);
+        // 8. Печатаем решение
+        printArray(ifOurNumber, X, array);
+    }
+
+    // 3. Создаем массив размера N
+    public static int[] createArray(int N) {
+        return new int[N];
+    }
+
+    // 4. Заполняем массив
+    public static void fillArray(int[] array, Scanner sc) {
+        System.out.println("Введите " + array.length + " элементов массива :");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = sc.nextInt();
+        }
+    }
+
+    // 7. Ищем в массиве наше число
+    public static boolean forEachNumSearch(int[] array, int X) {
+        for (int num : array) {
+            if (num == X) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // 8. Печатаем решение
+    public static void printArray(boolean ifOurNumber, int X, int[] array) {
+        if (ifOurNumber) {
+            System.out.printf("Ваше число %d найдено в массиве %s ", X, Arrays.toString(array));
+        } else {
+            System.out.printf("Ваше число %d не найдено в массиве %s ", X, Arrays.toString(array));
+        }
+    }
+}
 //33. Написать программу разворота массива. Пример: [1, 2, 3] => [3, 2, 1]
 //=============================33=============================================*/
-        /* Scanner sc = new Scanner(System.in);*/
+/*        *//* Scanner sc = new Scanner(System.in);*//*
         // Задаем массив
         int[] arr = {1, 2, 3};
         System.out.println("Исходный массив: " + Arrays.toString(arr));
@@ -25,7 +101,7 @@ public class Main {
             arr[length - i - 1] = temp;
         }
     }
-}
+}*/
 //32. Написать программу замены элементов массива на противоположные Пример: [1, 2, 3] => [-1, -2, -3]
 //=============================32=============================================*/
 /*        Scanner sc = new Scanner(System.in);
