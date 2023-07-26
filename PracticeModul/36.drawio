@@ -1,0 +1,45 @@
+<mxfile host="Electron" modified="2023-07-26T10:30:06.191Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" etag="1lAZ2cQxrBs65iim-dBT" version="21.6.5" type="device">
+  <diagram name="Страница 1" id="9AdSGZ-wU5dIfNWMVngr">
+    <mxGraphModel dx="1038" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0heC4gE45_hJEYmAL6Oo-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fwMDCeDDaVyuJN_M8xQI-2" target="y0_Ly3QX1UwcSKQh8jFW-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fwMDCeDDaVyuJN_M8xQI-2" value="start" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="266" y="23" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y0_Ly3QX1UwcSKQh8jFW-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="y0_Ly3QX1UwcSKQh8jFW-42" target="y0_Ly3QX1UwcSKQh8jFW-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y0_Ly3QX1UwcSKQh8jFW-42" value="int[] array" style="whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="266" y="140" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0heC4gE45_hJEYmAL6Oo-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y0_Ly3QX1UwcSKQh8jFW-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="326" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y0_Ly3QX1UwcSKQh8jFW-46" value="createArray(123)&amp;nbsp;&lt;br&gt;array[i] = (int) (Math.random() * 123) + 1;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="139" y="220" width="374" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4akgeYmx3GlECvj2UZmQ-11" value="end" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="286" y="590" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0heC4gE45_hJEYmAL6Oo-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0heC4gE45_hJEYmAL6Oo-5" target="0heC4gE45_hJEYmAL6Oo-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0heC4gE45_hJEYmAL6Oo-5" value="int countInRange = countElementsInRange(array);" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="198" y="320" width="256" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0heC4gE45_hJEYmAL6Oo-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0heC4gE45_hJEYmAL6Oo-6" target="4akgeYmx3GlECvj2UZmQ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0heC4gE45_hJEYmAL6Oo-6" value="System.out.println(&quot;Количество элементов из отрезка [10, 99]: &quot; + countInRange);" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="194" y="440" width="264" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

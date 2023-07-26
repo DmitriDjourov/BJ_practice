@@ -6,26 +6,66 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+//36. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
+//=============================36=============================================*/
+        //1. Создаем одномерный массив из 123 чисел
+        //2. Заполняем массив случайными числами от 0 до 123 включительно
+        //3. Находим количество элементов из отрезка [10, 99]
+        //4. Выводим результат на печать
+
+        //1. Создаем одномерный массив из 123 чисел
+        int[] array = createArray();
+        //2. Заполняем массив случайными числами от 0 до 123 включительно
+        //3. Находим количество элементов из отрезка [10, 99]
+        int countInRange = countElementsInRange(array);
+        //4. Выводим результат на печать
+        System.out.println("Количество элементов из отрезка [10, 99]: " + countInRange);
+    }
+
+    //Метод для создания и заполнения массива случайными числами из диапазона  [0, 123]
+    public static int[] createArray() {
+        // 3. Создаем массив размера 123
+        int[] array = new int[123];
+        //4. Заполнения массива случайными числами из диапазона  [0, 123]
+        Random random = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 123) + 1; // генерируем случайные число от 0 до 123 включительно
+        }
+        return array;
+    }
+
+    // Метод для подсчета количества элементов в массиве, находящихся в отрезке [10, 99]
+    public static int countElementsInRange(int[] arr) {
+        int count = 0;
+        for (int num : arr) {
+            if (num >= 10 && num <= 99) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
 //35.    Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
 //=============================35=============================================*/
-        // 1. Задаем число размер массива
-        // int N;
-        // System.out.println("Введите число , размер массива : ");
-        // 2.  Заполняем число размер массива
-        // N = sc.nextInt();
-        // 3. Создаем массив размера N
-        // int[] array = createArray(N);
-        // 4. Заполняем массив рандомными трехзначными положительными числами ( числами из диапазона  [100, 999])
-        // int[] array = new int[N];
-        // Random random = new Random();
-        // 5. Подсчитываем количество четных и нечетных чисел (eveNumbers, oddNumbers)
-        // int countEveNumbers = eveNumbers(array);
-        // int countOddNumbers = oddNumbers(array);
-        // if (array[i]%2 == 0) для четных , и array[i]%2 != 0 для нечетных
-        // 6. Распечатываем массив, количество четных, количество нечетных чисел
-        // printArrayEveOdd(countEveNumbers, countOddNumbers, array)
-        // System.out.printf("В массиве %s , четных чисел %d , нечетных чисел %d ", Arrays.toString(array),countEveNumbers, countOddNumbers);
-
+// 1. Задаем число размер массива
+// int N;
+// System.out.println("Введите число , размер массива : ");
+// 2.  Заполняем число размер массива
+// N = sc.nextInt();
+// 3. Создаем массив размера N
+// int[] array = createArray(N);
+// 4. Заполняем массив рандомными трехзначными положительными числами ( числами из диапазона  [100, 999])
+// int[] array = new int[N];
+// Random random = new Random();
+// 5. Подсчитываем количество четных и нечетных чисел (eveNumbers, oddNumbers)
+// int countEveNumbers = eveNumbers(array);
+// int countOddNumbers = oddNumbers(array);
+// if (array[i]%2 == 0) для четных , и array[i]%2 != 0 для нечетных
+// 6. Распечатываем массив, количество четных, количество нечетных чисел
+// printArrayEveOdd(countEveNumbers, countOddNumbers, array)
+// System.out.printf("В массиве %s , четных чисел %d , нечетных чисел %d ", Arrays.toString(array),countEveNumbers, countOddNumbers);
+/*
         Scanner sc = new Scanner(System.in);
         // 1. Задаем число размер массива
         int N;
@@ -83,7 +123,7 @@ public class Main {
         System.out.printf("В массиве %s , четных чисел %d , нечетных чисел %d ", Arrays.toString(array),
                 countEveNumbers, countOddNumbers);
     }
-}
+}*/
 // 34.       Определить, присутствует ли в заданном массиве, некоторое число
 //=============================34=============================================*/
 // 1. Задаем число размер массива
