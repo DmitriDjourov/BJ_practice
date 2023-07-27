@@ -206,6 +206,9 @@ public class Main {
 
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(900) + 100; // генерируем случайные число от 100 до 999
+            // arr[i] = random.nextInt(999 - 100 + 1) + 100;
+            //array[i] = (int) (Math.random() * (999 - 100) + 1) + 100;
+            //array[i] = (int) (Math.random() * (maxNum - minNum) + 1) + minNum;
         }
         return array;
     }
